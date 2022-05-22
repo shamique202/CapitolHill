@@ -49,7 +49,7 @@ function login(creds) { // <--- user identity and password authentication
 function getProfile(username) {
   return fetch(BASE_URL + username, {
     headers: { 
-      Authorization: "Bearer" + tokenService.getToken(), },
+      Authorization: "Bearer" + tokenService.getToken(), }, // <-- logging response headers
 }).then((res) => {
   if(res.ok) return res.json();
   if(res.status ===404) throw new Error("User not found!");
