@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Post = require('../models/post')
 const jwt = require("jsonwebtoken");
 const SECRET = process.env.SECRET;
 const { v4: uuidv4 } = require("uuid");
@@ -6,13 +7,23 @@ const S3 = require("aws-sdk/clients/s3");
 const s3 = new S3(); // initialize the construcotr
 // now s3 can crud on our s3 buckets
 
+
+//testing
+const BUCKET_NAME = process.env.BUCKET_NAME 
+console.log(BUCKET_NAME, "BUCKET_NAME")
+
+
 module.exports = {
   signup,
   login,
+  profile // down below
 };
 
-function signup(req, res) {
-  console.log(req.body, req.file);
+// implementation of async & await creates cleaner, simpler code 
+// helps me to lesson errors throughout my code
+async function signup(req, res) {
+  console.log('signup')
+  console.log(req.body, req.file); //req.body & req.file are present for the multer
 
   //////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////
@@ -25,9 +36,8 @@ function signup(req, res) {
     Key: filePath,
     Body: req.file.buffer,
   };
-  //your bucket name goes where collectorcat is
   //////////////////////////////////////////////////////////////////////////////////
-  s3.upload(params, async function (err, data) {
+  s3.upload(params, async function (err, data) { // aws uploading ability for the user's pics
     console.log(data, "from aws"); // data.Location is our photoUrl that exists on aws
     const user = new User({ ...req.body, photoUrl: data.Location });
     try {
@@ -36,6 +46,7 @@ function signup(req, res) {
       res.json({ token });
     } catch (err) {
       // Probably a duplicate email
+      console.log(err, " err the signup controller function");
       res.status(400).json(err);
     }
   });
@@ -63,10 +74,25 @@ async function login(req, res) {
 
 /*----- Helper Functions -----*/
 
-function createJWT(user) {
+function createJWT(user) { //contains the verified user, jwt is known to scale easily which is why its so helpful
   return jwt.sign(
     { user }, // data payload
     SECRET,
     { expiresIn: "24h" }
   );
+}
+
+async function profile(req, res){
+  try {
+    // findOne locates the first element
+    const user = await User.findOne({username: req.params.username}) 
+    // user is found bc of the params id
+    if(!user) return res.status(404).json({err: 'User not found'})
+    const posts = await Post.find({user: user._id}).populate("user").exec();
+    console.log(posts, '<= this posts')
+    res.status(200).json({posts: posts, user: user})
+  } catch(err){
+    console.log(err)
+    res.status(400).json({err})
+  }
 }

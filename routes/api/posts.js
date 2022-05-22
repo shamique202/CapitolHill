@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const postsCtrl = require('../../controllers/posts');
-const multer = require('multer');
-const upload = multer();
+const multer = require('multer'); // multer helps clients to upload images & process photo files, then to AWS!!!
+const upload = multer(); // AWS now involved
 /*---------- Public Routes ----------*/
 // CRUD ROUTES : create, read, delete
 router.get('/', isAuthorized, upload.single('photo'), postsCtrl.create);
