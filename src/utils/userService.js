@@ -53,17 +53,17 @@ function getProfile(username) {
 }).then((res) => {
   if(res.ok) return res.json();
   if(res.status ===404) throw new Error("User not found!");
-  throw new Error("Bad credentials"); // catch block
+  throw new Error("Bad credentials"); // <-- catch block
 }
 )
 }
 
-const userService = {
+export default {
   signup,
   logout,
   login,
   getUser,
-  getProfile // its function above
+  getProfile // <-- its function above
 };
 
-export default userService;
+
