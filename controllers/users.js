@@ -84,7 +84,7 @@ function createJWT(user) { //contains the verified user, jwt is known to scale e
 
 async function profile(req, res){
   try {
-    // findOne locates the first element
+    // .findOne locates the first element
     const user = await User.findOne({username: req.params.username}) 
     // user is found bc of the params id
     if(!user) return res.status(404).json({err: 'User not found'})
