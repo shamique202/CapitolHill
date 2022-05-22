@@ -31,11 +31,11 @@ function removeToken() {
   localStorage.removeItem("token");
 }
 
-const tokenService = {
+export default {
   setToken,
   getToken,
   removeToken,
   getUserFromToken,
 };
 
-export default tokenService;
+
