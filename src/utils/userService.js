@@ -63,7 +63,7 @@ const userService = {
   logout,
   login,
   getUser,
-  getProfile
+  getProfile // its function above
 };
 
 export default userService;
