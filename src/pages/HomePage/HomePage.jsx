@@ -34,7 +34,7 @@ export default function CreateButton() {
                                 marginBottom: '1em',
                                 marginTop: '2em',
                             }} />
-                        <h2>this is your number one fashion source for the latest news in styles and fashion trends, celebrity photos, news, and tips. </h2>
+                        <h2>this is your number one fashion source for the latest news in styles and fashion trends, celebrity photos, news, and tips.</h2>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
