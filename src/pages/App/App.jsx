@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout user={user} handleLogout={handleLogout} />}
         >
-          <Route index element={<Home user={user} />}></Route>
+          <Route index element={<HomePage user={user} />}></Route>
           <Route
             path="/login"
             element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
@@ -41,7 +41,7 @@ function App() {
       </Routes>
     );
   }
-  
+
   return (
     <Routes>
       <Route
