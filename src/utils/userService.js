@@ -24,11 +24,9 @@ function signup(user) {
   // The above could have been written as
   //.then((token) => token.token);
 }
-
 function getUser() { // <--- identifying the user but they must be logged in 
   return tokenService.getUserFromToken();
 }
-
 function logout() { // <--- used now able to logout
   tokenService.removeToken();
 }
