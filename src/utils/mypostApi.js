@@ -2,7 +2,8 @@ import tokenService from './tokenService';
 
 const BASE_URL = '/api/posts/';
 
-export function create(post) { // making a create function to DB & grabbing the tokens
+export function create(post) { 
+// making a create function to DB & grabbing the tokens to allow user to post
     return fetch(BASE_URL, {
         method: 'POST',
         body: post, 
@@ -38,7 +39,7 @@ export function getAll() {
         Authorization: "Bearer " + tokenService.getToken(),
       },
     }).then((res) => {
-      if (res.ok) return res.json({message: "successfully deleted"});
-      throw new Error("Login to remove a post");
+      if (res.ok) return res.json({message: "your post has been deleted"});
+      throw new Error("Login to remove your post");
     });
   }
