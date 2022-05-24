@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import PostsFeed from "../../components/PostsFeed/PostsFeed";
+import PostFeeds from "../../components/PostFeeds/PostFeeds";
 import * as mypostApi from '../../utils/mypostApi';
 import * as mylikesApi from '../../utils/mylikesApi';
 import { Grid, Container, Header } from "semantic-ui-react";
 
-export default function Feed(props) {
+export default function Feedpage(props) {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -86,7 +86,7 @@ export default function Feed(props) {
                                 marginTop: '2em',  }} />
                     </Grid.Column>
                     <Grid.Column width={12} >
-                        <PostsFeed
+                        <PostFeeds
                             posts={posts}
                             isProfile={false}
                             numPhotosCol={2}

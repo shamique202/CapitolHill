@@ -50,7 +50,7 @@ export default function LoginPage(props) {
           <Image src="https://i.imgur.com/12PBKfs.jpg" size="small" centered/>
           <Message
               attached
-              header='Welcome back!'
+              header='Greetings!'
               content='Welcome to Capitol Hill, a fashion blog for displaying your creativity. Signup to view our content!'/> 
           <Form autoComplete="off" onSubmit={handleSubmit}>
             <Segment stacked>
@@ -75,9 +75,9 @@ export default function LoginPage(props) {
                 onChange={handleChange}
                 required />
               <Button
-                color="blue"
+                color="pink"
                 fluid
-                size="large"
+                size="medium"
                 type="submit"
                 className="btn">
                 Login

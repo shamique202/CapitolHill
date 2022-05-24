@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Grid, Container } from "semantic-ui-react";
 import Loading from "../../components/Loader/Loader";
 import ProfileBio from "../../components/ProfileBio/ProfileBio";
-import PostsFeed from "../../components/PostsFeed/PostsFeed";
+import PostFeeds from "../../components/PostFeeds/PostFeeds";
 import { useParams } from "react-router-dom";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import userService from "../../utils/userService";
@@ -73,7 +73,7 @@ export default function ProfilePage(props) {
                         <ProfileBio float="left" user={user} />
                     </Grid.Column>
                     <Grid.Column width={12}>
-                        <PostsFeed
+                        <PostFeeds
                             isProfile={false}
                             posts={posts}
                             numPhotosCol={2}

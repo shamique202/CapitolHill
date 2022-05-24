@@ -23,14 +23,17 @@ module.exports = {
 // helps me to lesson errors throughout my code
 async function signup(req, res) {
   console.log('signup')
-  console.log(req.body, req.file); //req.body & req.file are present for the multer
-
+   //req.body & req.file are present for the multer
+  console.log(req.file)
+  
   //////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////
 
   // FilePath unique name to be saved to our butckt
+
   const filePath = `${uuidv4()}/${req.file.originalname}`;
+
   const params = {
     Bucket: process.env.BUCKET_NAME,
     Key: filePath,

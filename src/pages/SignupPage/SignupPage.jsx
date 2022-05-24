@@ -50,7 +50,7 @@ setSelectedFile(e.target.files)
 return (
   <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Image src="https://i.imgur.com/12PBKfs.jpg" size="small" centered/>
+      <Image src="https://i.imgur.com/12PBKfs.jpg" size="large" centered/>
       <Message
             attached
             header='Hello!'
