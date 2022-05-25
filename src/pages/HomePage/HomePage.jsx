@@ -43,8 +43,8 @@ export default function CreateButton() {
                 </Grid.Row>
                 <Grid.Row>
                     <Link to="/form">
-                        <Button primary size='huge'>
-                            Make your post!
+                        <Button primary size='massive'>
+                            Make your post
                             <Icon name='right arrow' />
                         </Button>
                     </Link>
