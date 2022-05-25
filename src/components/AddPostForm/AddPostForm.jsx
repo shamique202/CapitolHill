@@ -10,16 +10,20 @@ export default function AddPostForm(props) {
         setSelectedFile(e.target.files[0]);
     }
     function handleChange(e) {
+        console.log(e.target.value)
         setState({
             ...state,
             [e.target.name]: e.target.value,
         });
     }
     function handleSubmit(e) {
-        e.preventDefault()   
+        e.preventDefault() 
+        console.log(state, selectedFile)  
+
         const formData = new FormData();
         formData.append('photo', selectedFile);
         formData.append('description', state.description);
+        console.log(formData)
         props.handleAddPostForm(formData);
     }
     return (

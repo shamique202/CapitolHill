@@ -27,14 +27,14 @@ export default function CreateButton() {
                     <Grid.Column style={{ maxWidth: 450 }}>
                         <Header
                             as='h1'
-                            content='Operating Since 1994,'
+                            content='Since 1994,'
                             style={{
                                 fontSize: '4em',
                                 fontWeight: 'bold',
                                 marginBottom: '1em',
                                 marginTop: '2em',
                             }} />
-                        <h2>this is your number one fashion source for the latest news in styles and fashion trends, celebrity photos, news, and tips.</h2>
+                        <h2>this is your number one fashion source for the latest news in styles and fashion trends, celebrity photos, news, and tips!</h2>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>

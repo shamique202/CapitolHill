@@ -43,10 +43,11 @@ try {
   setError(err.message)
 }
   }
-function handleFileInput(e) {
-console.log(e.target.files)
-setSelectedFile(e.target.files)
-}
+  function handleFileInput(e) {
+    console.log(e.target.files)
+    setSelectedFile(e.target.files[0])
+    }
+
 return (
   <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
     <Grid.Column style={{ maxWidth: 450 }}>

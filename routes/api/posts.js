@@ -5,12 +5,13 @@ const multer = require('multer'); // multer helps clients to upload images & pro
 const upload = multer(); // AWS now involved
 /*---------- Public Routes ----------*/
 // CRUD ROUTES : create, read, delete
-router.get('/', isAuthorized, upload.single('photo'), postsCtrl.create);
+router.post('/', isAuthorized, upload.single('photo'), postsCtrl.create);
 router.get('/', postsCtrl.index);
-router.deleted('/:id', postsCtrl.deletePost);
+router.delete('/:id', postsCtrl.deletePost);
 
 /*---------- Protected Routes ----------*/
 function isAuthorized(req, res, next){
+    console.log("made to routes")
     if(req.user){
         return next()
     }else{

@@ -3,12 +3,15 @@ import tokenService from './tokenService';
 const BASE_URL = '/api/posts/';
 
 export function create(post) { 
+  console.log(post)
 // making a create function to DB & grabbing the tokens to allow user to post
     return fetch(BASE_URL, {
         method: 'POST',
         body: post, 
+        // body: JSON.stringify(post),
         headers: {
-            'Authorization': 'Bearer ' + tokenService.getToken()
+            'Authorization': 'Bearer ' + tokenService.getToken(),
+            'Content-Type': 'application/json'
         }
     }).then(res => {
         if (res.ok) return res.json();
