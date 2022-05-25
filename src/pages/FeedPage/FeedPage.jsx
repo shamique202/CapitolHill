@@ -80,7 +80,7 @@ export default function Feedpage(props) {
                             content='Feed Page'
                             inverted
                             style={{
-                                fontSize: '4em',
+                                fontSize: '3em',
                                 fontWeight: 'bold',
                                 marginBottom: '1em',
                                 marginTop: '2em',  }} />

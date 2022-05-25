@@ -51,17 +51,20 @@ export default function ProfilePage(props) {
         }
     }
     async function removePost(postId) {
-        try { const data = await mypostApi.removePost(postId);
-            console.log(data, "the data from post delete");
+        try { 
+            const data = await mypostApi.removePost(postId);
+            console.log(data, " <- this is the data response from post delete");
             getProfile(false);
-        } catch (err) {
+        } catch (err){
             console.log(err);
             setError(err.message);
         }
     }
+
     if (error) {
         return <ErrorMessage error={error} />;
     }
+
     if (loading) {
         return <Loading />;
     }
@@ -80,7 +83,8 @@ export default function ProfilePage(props) {
                             user={props.user}
                             addLike={addLike}
                             removeLike={removeLike}
-                            removePost={removePost} />
+                            removePost={removePost} 
+                    />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

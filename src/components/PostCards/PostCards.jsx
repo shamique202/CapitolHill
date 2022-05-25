@@ -8,7 +8,7 @@ export default function PostCards({ post, isProfile, user, addLike, removeLike, 
         (eachLike) => eachLike.username === user.username
     );
 
-    const likeColor = likeIndex > -1 ? "red" : "grey";
+    const likeColor = likeIndex > -1 ? "pink" : "grey";
     const clickHandler =
         likeIndex > -1
             ? () => removeLike(post.likes[likeIndex]._id)
