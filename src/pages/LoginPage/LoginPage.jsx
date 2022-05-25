@@ -75,7 +75,7 @@ export default function LoginPage(props) {
                 onChange={handleChange}
                 required />
               <Button
-                color="pink"
+                color="black"
                 fluid
                 size="medium"
                 type="submit"

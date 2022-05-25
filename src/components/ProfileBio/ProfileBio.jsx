@@ -4,7 +4,7 @@ import { Image, Grid, Segment, Header, Container } from "semantic-ui-react";
 export default function ProfileBio({ user }) {
     return (
         <Container>
-            <Grid columns={2} className="Profile">
+            <Grid columns={3} className="Profile">
                 <Grid.Row>
                     <Grid.Column width={12}>
                         <Header
@@ -32,7 +32,7 @@ export default function ProfileBio({ user }) {
                             <span> {user.bio} </span>
                             <br />
                             <br />
-                            <span><strong>Physical location:</strong></span>
+                            <span><strong>Your location:</strong></span>
                             <br />
                             <span> {user.location} </span>
                         </Segment>

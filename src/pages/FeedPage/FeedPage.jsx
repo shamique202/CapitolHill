@@ -77,13 +77,14 @@ export default function Feedpage(props) {
                     <Grid.Column width={4}>
                         <Header
                             as='h1'
-                            content='Feed Page'
+                            content='Our Style Page'
                             inverted
                             style={{
-                                fontSize: '3em',
+                                fontSize: '2.5em',
                                 fontWeight: 'bold',
-                                marginBottom: '1em',
-                                marginTop: '2em',  }} />
+                                marginBottom: '2em',
+                                marginTop: '1em',
+                                marginRight: 'right', }} />
                     </Grid.Column>
                     <Grid.Column width={15} >
                         <PostFeeds

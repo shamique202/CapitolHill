@@ -36,7 +36,7 @@ export function getAll() {
   export function removePost(id) { 
       // remove/delete post from database =, feed page 
       // users must be logged in before removing any posts
-    return fetch(`${BASE_URL}${id}`, {
+    return fetch(`${BASE_URL}/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: 'Bearer ' + tokenService.getToken()

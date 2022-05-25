@@ -6,8 +6,8 @@ export default function PageHeader({ user, handleLogout }) {
     return ( <Segment clearing>
             <Header as='h3' floated='right'>
                 <Link to={`/${user.username}`}><Image src={user.photoUrl ? user.photoUrl : "https://react.semantic-ui.com/images/wireframe/square-image.png"} avatar></Image></Link>
-                <Link to="/"><Icon color='grey' name="university"></Icon></Link>
-                <Link to="/feed"><Icon color='grey' name='camera retro'></Icon></Link>
+                <Link to="/"><Icon color='black' name="university"></Icon></Link>
+                <Link to="/feed"><Icon color='black' name='camera retro'></Icon></Link>
                 <Link to='' color='grey' onClick={handleLogout}>Logout</Link>
             </Header>
             <Header as='h4' floated='left'>
