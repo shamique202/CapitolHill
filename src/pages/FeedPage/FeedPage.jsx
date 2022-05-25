@@ -85,11 +85,11 @@ export default function Feedpage(props) {
                                 marginBottom: '1em',
                                 marginTop: '2em',  }} />
                     </Grid.Column>
-                    <Grid.Column width={12} >
+                    <Grid.Column width={15} >
                         <PostFeeds
                             posts={posts}
                             isProfile={false}
-                            numPhotosCol={2}
+                            numPhotosCol={3}
                             loading={loading}
                             user={props.user}
                             addLike={addLike}
