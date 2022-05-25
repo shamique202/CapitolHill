@@ -1,6 +1,6 @@
 import tokenService from './tokenService';
 
-const BASE_URL = '/api/posts/';
+const BASE_URL = '/api/posts';
 
 export function create(post) { 
   console.log(post)
@@ -11,7 +11,7 @@ export function create(post) {
         // body: JSON.stringify(post),
         headers: {
             'Authorization': 'Bearer ' + tokenService.getToken(),
-            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/json'
         }
     }).then(res => {
         if (res.ok) return res.json();
