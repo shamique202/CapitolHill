@@ -63,7 +63,7 @@ export default function Feedpage(props) {
         try {
             const data = await mypostApi.removePost(postId);
             console.log(data, "response from deleting function");
-            getPosts(false);
+            getPosts(false)
         } catch (err) {
             console.log(err);
             setError(err.message);

@@ -32,7 +32,8 @@ return (
                                 }} 
                                 name={"delete"} 
                                 size={"small"} 
-                                onClick={deleteHandler} />
+                                onClick={deleteHandler} 
+                            />
                         : ""}
                         <Link to={`/${post.user.username}`}>
                             <Image
@@ -52,7 +53,8 @@ return (
             </Card.Content>
             <Image src={`${post.photoUrl}`} wrapped ui={false} />
             <Card.Content extra textAlign={"left"}>
-                <Icon name={"heart"} size={"large"} color={likeColor} onClick={clickHandler} />
+                <Icon name={"heart"} size={"large"} color={likeColor} onClick={clickHandler} 
+                />
                 {post.likes.length} Likes
             </Card.Content>
         </Card>

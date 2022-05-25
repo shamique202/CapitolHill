@@ -10,7 +10,7 @@ export function create(post) {
         body: post, 
         // body: JSON.stringify(post),
         headers: {
-            'Authorization': 'Bearer ' + tokenService.getToken(),
+            'Authorization': 'Bearer ' + tokenService.getToken()
             // 'Content-Type': 'application/json'
         }
     }).then(res => {
@@ -37,12 +37,12 @@ export function getAll() {
       // remove/delete post from database =, feed page 
       // users must be logged in before removing any posts
     return fetch(`${BASE_URL}${id}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: {
-        Authorization: "Bearer " + tokenService.getToken(),
-      },
+        Authorization: 'Bearer ' + tokenService.getToken()
+      }
     }).then((res) => {
-      if (res.ok) return res.json({message: "your post has been deleted"});
-      throw new Error("Login to remove your post");
-    });
+      if (res.ok) return res.json();
+      throw new Error('Login to remove your post')
+    })
   }
