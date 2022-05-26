@@ -2,3 +2,9 @@ body {
     background-color: rgb(251, 244, 236);
     font-family: Baskerville;
 }
+.ui.blue.button, .ui.blue.buttons .button {
+    background-color: black;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+}

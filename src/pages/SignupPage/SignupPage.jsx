@@ -97,7 +97,7 @@ return (
           <Form.TextArea
             label="Bio"
             name="bio"
-            placeholder="Please share your experience with our team at Capitol Hill and we you love our application!"
+            placeholder="Please share your interests and hobbies and why you want to join our community!"
             onChange={handleChange} />
           <Form.Input
             fluid
@@ -115,7 +115,7 @@ return (
               placeholder="upload image"
               onChange={handleFileInput} />
           </Form.Field>
-          <Button color="blue" type="submit" className="btn">
+          <Button color="black" type="submit" className="btn">
             Signup
           </Button>
         </Segment>

@@ -47,7 +47,7 @@ export default function LoginPage(props) {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Image src="https://i.imgur.com/12PBKfs.jpg" size="small" centered/>
+          <Image src="https://i.imgur.com/12PBKfs.jpg" size="large" centered/>
           <Message
               attached
               header='Greetings!'

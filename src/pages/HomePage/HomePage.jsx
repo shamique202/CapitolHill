@@ -19,9 +19,10 @@ export default function CreateButton() {
                                 marginBottom: '1em',
                                 marginTop: '2em',
                             }} />
-                        <h2>Clothing</h2>
+                        <h2>Style Trends</h2>
                         <h2>Individuality</h2>
                         <h2>Networking</h2>
+                        <h2>Photography</h2>
                         
                     </Grid.Column>
                     <Grid.Column style={{ maxWidth: 450 }}>
@@ -29,12 +30,13 @@ export default function CreateButton() {
                             as='h1'
                             content='Since 1994,'
                             style={{
+                                button:"black",
                                 fontSize: '4em',
                                 fontWeight: 'bold',
                                 marginBottom: '1em',
                                 marginTop: '2em',
                             }} />
-                        <h2>this is your number one fashion source for the latest news in styles and fashion trends, celebrity photos, news, and tips!</h2>
+                        <h2>We have been your number one fashion source for the latest news in styles and fashion trends, celebrity photos, news, and tips! You can access photos made by other creative individuals wanting to be expressive in setting trends as well. Click below to be featured to our community!</h2>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>

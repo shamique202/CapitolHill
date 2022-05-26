@@ -31,12 +31,13 @@ return (
                     <Grid.Column style={{maxWidth: 450}}>
                         <Header
                             as='h1'
-                            content='Make your post!'
+                            content='Create a post!'
                             style={{
-                                fontSize: '4em',
-                                fontWeight: 'bold',
+                                
+                                fontSize: '4.5em',
+                                fontWeight: 'light',
                                 marginBottom: '1em',
-                                marginTop: '0', }} />
+                                marginTop: '2', }} />
                         <AddPostForm handleAddPostForm={handleAddPostForm} />
                     </Grid.Column>
                 </Grid.Row>
