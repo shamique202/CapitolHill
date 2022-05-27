@@ -8,6 +8,7 @@ A visual platform enabling users to share images with others who see themselves 
 
 ###  Screenshots: 
 ![login](public/login.png)
+![feedpg](public/feedpg.png)
 ![feed](public/feed.png)
 
 ##  Technologies Used:
