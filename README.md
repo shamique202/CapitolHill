@@ -7,8 +7,8 @@ Many pieces of clothing are invented for a vital purpose before they become fash
 A visual platform enabling users to share images with others who see themselves as visual storytellers.
 
 ###  Screenshots: 
-![login](build/login.png)
-![feed](build/feed.png)
+![login](public/login.png)
+![feed](public/feed.png)
 
 ##  Technologies Used:
 -   HTML5
