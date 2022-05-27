@@ -96,8 +96,8 @@ return (
             required />
           <Form.TextArea
             label="Bio"
-            name="bio"
-            placeholder="Please share your interests and hobbies and why you want to join our community!"
+            name="Tell us about yourself!"
+            placeholder="Bio"
             onChange={handleChange} />
           <Form.Input
             fluid
