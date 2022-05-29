@@ -19,7 +19,6 @@ A visual platform enabling users to share images with others who see themselves 
 -   Node.JS
 -   Express.JS
 -   MongoDB
--   Mongoose
 -   Semantic UI framework
 
 ##  Getting started:
